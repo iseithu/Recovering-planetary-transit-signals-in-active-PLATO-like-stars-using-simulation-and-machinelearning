@@ -1,0 +1,95 @@
+Observation:
+  QuarterDuration :  [90.,90.,90.]
+  MasterSeed: 504040900
+
+  Gaps:
+    Enable: 1
+    Seed: -1
+    InterQuarterGapDuration: 3.
+    RandomGapDuration: 0.
+    RandomGapTimeFraction: 0.5
+    RandomGapStep: 0.
+    PeriodicGapCadence: 5.
+    PeriodicGapDuration: 20.
+    PeriodicGapJitter: 2.
+    PeriodicGapStep: 0.
+
+Instrument:
+  Sampling: 25.
+  IntegrationTime: 22.
+  GroupID: [1,2,3,4]
+  NGroup: 4
+  NCamera: 6
+  TimeShift: 6.25
+
+  RandomNoise:
+    Enable: 1
+    Type: PLATO_SIMU
+    NSR: 73.
+
+  Systematics:
+    Enable: 1
+    Table: systematics/PLATO_systematics_BOL_V2.npy
+    Version: 2
+    DriftLevel: low
+    Seed: -1
+
+Star:
+  Mag: 10.796 #bright PLATO-like
+  ID: 3
+  ModelDir: models/
+  ModelType: UP
+  ModelName: Sunlike
+  ES: ms #main sequence
+  Teff: 5400.
+  Logg: 4.4 #for ms
+  SurfaceRotationPeriod: 12.923 #5–30 days range
+  CoreRotationFreq: 0.
+  Inclination: 73.242
+  Seed: -1
+
+Oscillations:
+  Enable: 1 
+  numax: 2200.
+  delta_nu: 100.
+  DPI: -1
+  q: 0.15
+  SurfaceEffects: 0
+  Seed: -1
+
+Activity:
+  Enable: 0 #Turn off
+  
+
+  Spot:
+    Enable: 0 
+
+  Flare:
+    Enable: 0
+  
+
+Granulation:
+  Enable: 1
+  Type: 1
+  Seed: -1
+
+Transit:
+  Enable: 0 
+
+
+External:
+  Enable: 0
+
+  
+  
+  #Mag = 9 – 12
+  #ID= 00000- 09999
+  #Rotation = 5 – 30 days  
+  #Inclination = 0 – 90°
+  #Sigma = 0
+  #Tau = 0
+  #Flare MeanPeriod = 0
+  #Flare Amplitude = 0
+  #Radius = 0
+  #OrbitalPeriod = 0
+  #Impact = 0

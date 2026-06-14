@@ -1,0 +1,105 @@
+Observation:
+  QuarterDuration :  [90.,90.,90.]
+  MasterSeed: 504040900
+
+  Gaps:
+    Enable: 1
+    Seed: -1
+    InterQuarterGapDuration: 3.
+    RandomGapDuration: 0.
+    RandomGapTimeFraction: 0.5
+    RandomGapStep: 0.
+    PeriodicGapCadence: 5.
+    PeriodicGapDuration: 20.
+    PeriodicGapJitter: 2.
+    PeriodicGapStep: 0.
+
+Instrument:
+  Sampling: 25.
+  IntegrationTime: 22.
+  GroupID: [1,2,3,4]
+  NGroup: 4
+  NCamera: 6
+  TimeShift: 6.25
+
+  RandomNoise:
+    Enable: 1
+    Type: PLATO_SIMU
+    NSR: 73.   # realistic PLATO noise level (~tens of ppm)
+
+  Systematics:
+    Enable: 1
+    Table: systematics/PLATO_systematics_BOL_V2.npy
+    Version: 2
+    DriftLevel: low
+    Seed: -1
+
+Star:
+  Mag: 10.62  #9–12 → PLATO bright stars (Krenn 2024)
+  ID: 1
+  ModelDir: models/
+  ModelType: UP
+  ModelName: Sunlike
+  ES: ms #main sequence
+  Teff: 5400.
+  Logg: 4.4 #for ms
+  SurfaceRotationPeriod: 9.47 #5–30 days range
+  CoreRotationFreq: 0.
+  Inclination: 74.21 # 0–90 → no transit, so full random orientation
+  Seed: -1
+
+Oscillations:
+  Enable: 1 
+  numax: 2200.
+  delta_nu: 100.
+  DPI: -1
+  q: 0.15
+  SurfaceEffects: 0
+  Seed: -1
+
+Activity:
+  Enable: 1 
+  Sigma: 404.9
+  Tau: 4.15
+  Seed: -1 
+
+  Spot:
+    Enable: 1 #Turn on
+    dOmega: 0.
+    MuStar: 0.6
+    MuSpot: 0.8
+    Radius: [3.2, 3.5, 5.4] # strong activity
+    Latitude: [0.0, 20.0, 40.0]
+    Longitude: [0.0, 0.0, 0.0]
+    Lifetime: [47, 24, 40]
+    TimeMax: [-1,-1,-1]
+    Contrast: [0.81, 0.66, 0.63]
+    Modulation: 0.0
+    Seed: -1
+    
+    
+  Flare:
+    Enable: 1
+    MeanPeriod: 4.27
+    Amplitude: 793.79
+    UpDown: 0.1
+    MeanDuration: -1
+    DurationDispersion: -1
+    Seed: -1 
+
+Granulation:
+  Enable: 1
+  Type: 1
+  Seed: -1
+
+Transit:
+  Enable: 0 
+
+
+External:
+  Enable: 1
+  FilePath: /home/israt/Downloads/psls/fixed_lc.txt
+
+  
+  
+

@@ -1,0 +1,95 @@
+Observation:
+  QuarterDuration: [90., 90., 90.]
+  MasterSeed: {seed}
+
+  Gaps:
+    Enable: 1
+    Seed: -1
+    InterQuarterGapDuration: 3.
+    RandomGapDuration: 0.
+    RandomGapTimeFraction: 0.5
+    RandomGapStep: 0.
+    PeriodicGapCadence: 5.
+    PeriodicGapDuration: 20.
+    PeriodicGapJitter: 2.
+    PeriodicGapStep: 0.
+
+Instrument:
+  Sampling: 25.
+  IntegrationTime: 22.
+  GroupID: [1,2,3,4]
+  NCamera: 6
+  TimeShift: 6.25
+
+  RandomNoise:
+    Enable: 1
+    Type: PLATO_SIMU
+    NSR: 73.
+
+  Systematics:
+    Enable: 1
+    Table: systematics/PLATO_systematics_BOL_V2.npy
+    Version: 2
+    DriftLevel: low
+    Seed: -1
+
+Star:
+  Mag: {mag}                     # 9–12 (PLATO regime)
+  ID: {id}
+  ModelDir: models/
+  ModelType: UP
+  ModelName: Sunlike
+  ES: ms
+  Teff: 5400.
+  Logg: 4.4
+  SurfaceRotationPeriod: {rotation}   # 5–30 days
+  CoreRotationFreq: 0.
+  Inclination: {inclination}          # 60–90° (transit visible)
+  Seed: -1
+
+Oscillations:
+  Enable: 1
+  numax: 2200.
+  delta_nu: 100.
+  DPI: -1
+  q: 0.15
+  SurfaceEffects: 0
+  Seed: -1
+
+Activity:
+  Enable: 1
+  Sigma: 500.
+  Tau: 7.
+  Seed: -1
+
+  Spot:
+    Enable: 0
+    Seed: -1
+
+  Flare:
+    Enable: 1
+    MeanPeriod: {flare_period}
+    Amplitude: {flare_amp}
+    UpDown: 0.1
+    MeanDuration: -1
+    DurationDispersion: -1
+    Seed: -1
+    
+Granulation:
+  Enable: 1
+  Type: 1
+  Seed: -1
+
+Transit:
+  Enable: 1
+  PlanetRadius: {radius}       # 0.8–4 Earth
+  OrbitalPeriod: {period}      # 2–50 days
+  PlanetSemiMajorAxis: 0.05
+  OrbitalAngle: 0.
+  LimbDarkeningCoefficients: [0.25, 0.75]
+  ImpactParameter: {impact}    # 0–0.8
+
+# PySpot activity
+External:
+  Enable: 1
+  FilePath: /home/israt/Downloads/psls/fixed_lc.txt

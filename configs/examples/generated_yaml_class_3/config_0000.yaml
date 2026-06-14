@@ -1,0 +1,118 @@
+Observation:
+  QuarterDuration :  [90.,90.,90.]
+  MasterSeed: 504040900
+
+  Gaps:
+    Enable: 1
+    Seed: -1
+    InterQuarterGapDuration: 3.
+    RandomGapDuration: 0.
+    RandomGapTimeFraction: 0.5
+    RandomGapStep: 0.
+    PeriodicGapCadence: 5.
+    PeriodicGapDuration: 20.
+    PeriodicGapJitter: 2.
+    PeriodicGapStep: 0.
+
+Instrument:
+  Sampling: 25.
+  IntegrationTime: 22.
+  GroupID: [1,2,3,4]
+  NGroup: 4
+  NCamera: 6
+  TimeShift: 6.25
+
+  RandomNoise:
+    Enable: 1
+    Type: PLATO_SIMU
+    NSR: 73.
+
+  Systematics:
+    Enable: 1
+    Table: systematics/PLATO_systematics_BOL_V2.npy
+    Version: 2
+    DriftLevel: low
+    Seed: -1
+
+Star:
+  Mag: 10.124 #bright PLATO-like
+  ID: 40000
+  ModelDir: models/
+  ModelType: UP
+  ModelName: Sunlike
+  ES: ms #main sequence
+  Teff: 5400.
+  Logg: 4.4 #for ms
+  SurfaceRotationPeriod: 12.361 #5–30 days range
+  CoreRotationFreq: 0.
+  Inclination: 80.945
+  Seed: -1
+
+Oscillations:
+  Enable: 1 
+  numax: 2200.
+  delta_nu: 100.
+  DPI: -1
+  q: 0.15
+  SurfaceEffects: 0
+  Seed: -1
+
+Activity:
+  Enable: 1 #Turn on
+  Sigma: 1293.518 
+  Tau: 6.296
+  Seed: -1
+
+  Spot:
+    Enable: 1 #Turn on
+    dOmega: 0.
+    MuStar: 0.59
+    MuSpot: 0.78
+    Radius: [8.0,8.0,8.0] # strong activity
+    Latitude: [0.0, 20.0, 40.0]
+    Longitude: [0.0, 0.0, 0.0]
+    Lifetime: [10,30,50]
+    TimeMax: [-1,-1,-1]
+    Contrast: [0.7, 0.8, 0.6]
+    Modulation: 0.
+    Seed: -1
+
+  Flare:
+    Enable: 1
+    MeanPeriod: 2.491
+    Amplitude: 2278.623
+    UpDown: 0.1
+    MeanDuration: -1
+    DurationDispersion: -1
+    Seed: -1
+
+Granulation:
+  Enable: 1
+  Type: 1
+  Seed: -1
+
+Transit:
+  Enable: 1 #turn On
+  PlanetRadius: 2.513 #earth like planet
+  OrbitalPeriod: 14.562   #short
+  PlanetSemiMajorAxis: 0.05
+  OrbitalAngle: 0.
+  LimbDarkeningCoefficients: [0.25, 0.75]
+  ImpactParameter: 0.075   # 0–0.8
+
+External:
+  Enable: 1
+  FilePath: /home/israt/Downloads/psls/fixed_lc.txt
+  
+  
+  #Mag = 9 – 12
+  #ID= 40000- 49999
+  #Rotation = 5 – 30 days  
+  #Inclination = 60 – 90°
+  #Sigma = 1200 – 2000
+  #Tau = 5 – 12
+  #Flare MeanPeriod = 0.5 – 3
+  #Flare Amplitude = 1500 – 3000
+  #Radius = 0.8 – 4 Earth radii
+  #OrbitalPeriod = 2 – 50 days
+  #Impact = 0 – 0.8
