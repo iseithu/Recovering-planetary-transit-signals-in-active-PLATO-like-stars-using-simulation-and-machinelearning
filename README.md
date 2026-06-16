@@ -1,5 +1,5 @@
-[![MASS-UBMATF](https://img.shields.io/badge/MASS--UBMATF-Computational_Astrobiology_2026-blue)](COURSE_PAGE_URL) https://doi.org/10.5281/zenodo.20722949
-
+[![MASS-UBMATF](https://img.shields.io/badge/MASS--UBMATF-Computational_Astrobiology_2026-blue)](COURSE_PAGE_URL)
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.20722949.svg)](https://doi.org/10.5281/zenodo.20722949)
 # Recovering planetary transit signals in active PLATO-like stars using simulation and machine learning
 
 This project focuses on generating synthetic PLATO-like stellar light curves for exoplanet transit detection under different stellar activity conditions.
